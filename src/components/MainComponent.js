@@ -2,7 +2,9 @@ import React from 'react';
 import { DISHES } from '../shared/dishes';
 import { Navbar,NavbarBrand } from 'reactstrap';
 import Menu from './MenuComponent';
-import Contact from './contactComponent';
+import Header from './HeaderComponent';
+import Footer from './FooterComponent';
+//import Contact from './contactComponent';
 
 class Main extends React.Component {
 	constructor(props) {
@@ -12,10 +14,6 @@ class Main extends React.Component {
 	    }
 	}
 
-	// componentDidUpdate(){
-	// 	console.log(this.state.selectedDish);
-	// }
-
 	render(){
 		return(
 		    <div>
@@ -24,7 +22,9 @@ class Main extends React.Component {
 		          <NavbarBrand href="/">{"Sophie\'s Restaurant"}</NavbarBrand>
 		        </div>
 		      </Navbar>
+		      <Header />
 		      <Menu dishes={this.state.dishes} />
+		      <Footer />
 		    </div>
 		);
 	}
